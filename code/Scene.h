@@ -26,5 +26,8 @@ public:
 	std::vector< Body > m_bodies;
 	std::vector< Constraint * >	m_constraints;
 	ManifoldCollector m_manifolds;
+
+	bool Intersect(Body* bodyA, Body* bodyB, contact_t& contact);
+	void ResolveContact(contact_t& contact);
 };
 
